@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Asen Pro Light */
+@font-face {
+  font-family: 'Asen Pro';
+  src: url('/fonts/AsenPro-Light.otf') format('opentype');
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+/* Asen Pro Regular */
+@font-face {
+  font-family: 'Asen Pro';
+  src: url('/fonts/AsenPro-Regular.otf') format('opentype');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+/* Asen Pro Medium */
+@font-face {
+  font-family: 'Asen Pro';
+  src: url('/fonts/AsenPro-Medium.otf') format('opentype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+/* Asen Pro SemiBold */ 
+@font-face {
+  font-family: 'Asen Pro';
+  src: url('/fonts/AsenPro-Semibold.otf') format('opentype');
+  font-weight: 600; 
+  font-style: normal;
+}
+
+/* Asen Pro Bold */
+@font-face {
+  font-family: 'Asen Pro';
+  src: url('/fonts/AsenPro-Bold.otf') format('opentype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+
+* {
+  font-family: 'Asen Pro', sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #EBCC00;
+}
+
+@media (min-width: 320px) {
+  .swiper-pagination-bullet{
+    background-color: gray !important;
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .swiper-pagination-bullet-active{
+    background-color: #EBCC00 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper-pagination-bullet{
+    background-color: gray !important;
+    width: 17px !important;
+    height: 17px !important;
+  }
+
+  .swiper-pagination-bullet-active{
+    background-color: #EBCC00 !important;
+  }
+}

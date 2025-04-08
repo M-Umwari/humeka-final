@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_NAME: ${DB_NAME}
+      DB_PORT:  ${DB_PORT}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+      APP_URL: ${APP_URL}
+      DEFAULT_IMG: ${DEFAULT_IMG}
+      EMAIL_USER: ${EMAIL_USER}
+      EMAIL_PASSWORD: ${EMAIL_PASSWORD}
+      EMAIL_HOST: ${EMAIL_HOST}
+      EMAIL_PORT: ${EMAIL_PORT}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+      GOOGLE_REDIRECT_URL: ${GOOGLE_REDIRECT_URL}
+      GOOGLE_REFRESH_TOKEN: ${GOOGLE_REFRESH_TOKEN}
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY}
+      NODE_ENV: ${NODE_ENV}
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app

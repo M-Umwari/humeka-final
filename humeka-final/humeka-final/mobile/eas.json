@@ -1,0 +1,27 @@
+{
+  "cli": {
+    "version": ">= 10.2.1"
+  },
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      },
+      "env":{
+        "EXPO_PUBLIC_BASE_URL": "https://mumwari.tech/api",
+        "EXPO_PUBLIC_URL": "https://mumwari.tech",
+        "EXPO_PUBLIC_CLOUDINARY_UPLOAD_PRESET":"image_upload",
+        "EXPO_PUBLIC_CLOUDINARY_NAME": "dwvfkpxu9",
+        "EXPO_PUBLIC_DEFAULT_PROFILE_IMAGE": "https://res.cloudinary.com/dwvfkpxu9/image/upload/v1740585371/boy_lhrvrl.png"
+      }
+    },
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "production": {}
+  },
+  "submit": {
+    "production": {}
+  }
+}
